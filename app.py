@@ -6,10 +6,9 @@ import time
 
 # Load trained model
 # Load trained model
-import pickle
+import joblib
 
-with open("best_rf_model.pkl", "rb") as file:
-    model = pickle.load(file)
+model = joblib.load("best_rf_model.joblib")
 
 # No encoders.pkl used — provide fallback frequency maps
 product_freq_map = {}
