@@ -320,6 +320,48 @@ st.markdown("""
     ::-webkit-scrollbar-thumb:hover {
         background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);
     }
+            
+    /* === Text Visibility Fix === */
+
+    /* Make text inside gradient boxes darker and readable */
+    .result-card .price-value,
+    .result-card .price-label,
+    .comparison-box h3,
+    .comparison-box p,
+    .section-header,
+    .info-box,
+    .price-point h4,
+    .price-point p,
+    div, p, span {
+        color: #1a1a1a !important;  /* deep charcoal text */
+    }
+
+    /* Give subtle text shadow on gradient backgrounds */
+    .result-card .price-value,
+    .comparison-box h3 {
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.25);
+    }
+
+    /* Increase brightness/contrast for all content */
+    .result-card, .comparison-box {
+        filter: brightness(1.1) contrast(1.15);
+    }
+
+    /* Chart title + labels darker */
+    .js-plotly-plot .plotly text {
+        fill: #1a1a1a !important;
+    }
+
+    /* Fix faded chart title */
+    .gtitle {
+        fill: #1a1a1a !important;
+        font-weight: 600 !important;
+    }
+
+    /* Headings across app */
+    h1, h2, h3, h4, h5, h6 {
+        color: #1a1a1a !important;
+    }
     </style>
 """, unsafe_allow_html=True)
 
