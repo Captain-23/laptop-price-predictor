@@ -5,18 +5,15 @@ import pickle
 import time
 
 # Load trained model
+# Load trained model
+import pickle
+
 with open("best_rf_model.pkl", "rb") as file:
     model = pickle.load(file)
 
-# Load frequency/encoding maps (optional — safe fallback provided)
-try:
-    with open("encoders.pkl", "rb") as f:
-        encoders = pickle.load(f)
-    product_freq_map = encoders.get('product_freq_map', {})
-    gpu_model_freq_map = encoders.get('gpu_model_freq_map', {})
-except Exception:
-    product_freq_map = {}
-    gpu_model_freq_map = {}
+# No encoders.pkl used — provide fallback frequency maps
+product_freq_map = {}
+gpu_model_freq_map = {}
 
 # Page Configuration
 st.set_page_config(
