@@ -370,7 +370,7 @@ gpu_by_company = {
     for company in ['Intel', 'Nvidia', 'AMD']
 }
 # Sidebar with organized sections
-st.sidebar.image("https://img.icons8.com/clouds/200/laptop.png", use_container_width=True)
+st.sidebar.image("https://img.icons8.com/clouds/200/laptop.png", use_column_width=True)
 st.sidebar.markdown("<h2 style='text-align: center; color: #00d2ff; margin-bottom: 2rem; font-weight: 700;'>Configure Your Laptop</h2>", unsafe_allow_html=True)
 
 # Brand first
